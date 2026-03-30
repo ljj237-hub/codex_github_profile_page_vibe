@@ -1,11 +1,13 @@
 ﻿:root {
-  --bg: #f4f0e8;
+  --bg: #eef3fb;
   --text: #16202a;
-  --muted: #40505f;
-  --panel: #fffdf8;
-  --line: #d9d0c3;
-  --accent: #ef5b2a;
+  --muted: #41556d;
+  --panel: #fdfefe;
+  --line: #c9d6ea;
+  --accent: #1d66d8;
   --accent-2: #0b7a75;
+  --accent-soft: #dbe9ff;
+  --deep-blue: #0f3f8f;
 }
 
 * {
@@ -19,6 +21,7 @@ body {
   font-family: "Noto Sans KR", "Space Grotesk", sans-serif;
   background: radial-gradient(circle at top right, #ffe8d6 0%, transparent 50%),
     radial-gradient(circle at bottom left, #d7efe5 0%, transparent 45%),
+    radial-gradient(circle at 20% 20%, #d5e6ff 0%, transparent 38%),
     var(--bg);
   color: var(--text);
   scroll-behavior: smooth;
@@ -47,7 +50,7 @@ body {
 .bg-shape-a {
   width: 280px;
   height: 280px;
-  background: #f8a07d;
+  background: #9ec0ff;
   top: -80px;
   left: -90px;
 }
@@ -55,7 +58,7 @@ body {
 .bg-shape-b {
   width: 300px;
   height: 300px;
-  background: #7ccdb6;
+  background: #79a6f2;
   bottom: -100px;
   right: -80px;
   animation-delay: 2s;
@@ -88,6 +91,11 @@ body {
   color: inherit;
   text-decoration: none;
   font-weight: 500;
+  transition: color 160ms ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
 }
 
 .hero {
@@ -98,7 +106,7 @@ body {
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: 0.1em;
   font-size: 0.85rem;
-  color: var(--accent-2);
+  color: var(--deep-blue);
 }
 
 h1 {
@@ -128,7 +136,7 @@ h1 {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  transition: transform 180ms ease, background 180ms ease;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
 .btn:hover {
@@ -136,14 +144,16 @@ h1 {
 }
 
 .btn.primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #2e89ff 100%);
   border-color: var(--accent);
   color: #fff;
+  box-shadow: 0 8px 20px rgba(29, 102, 216, 0.22);
 }
 
 .btn.ghost {
-  color: var(--text);
-  background: #fff9f0;
+  color: var(--deep-blue);
+  background: var(--accent-soft);
+  border-color: #b8cff2;
 }
 
 .section {
@@ -169,7 +179,7 @@ h1 {
 }
 
 .section-title-row a {
-  color: var(--accent-2);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
@@ -182,16 +192,17 @@ h1 {
 }
 
 .card {
-  background: linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
+  background: linear-gradient(180deg, #fdfefe 0%, #eff5ff 100%);
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 1.1rem;
-  transition: transform 220ms ease, box-shadow 220ms ease;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
 .card:hover {
   transform: translateY(-4px) rotate(-0.4deg);
-  box-shadow: 0 10px 30px rgba(50, 37, 20, 0.12);
+  border-color: #98b8ea;
+  box-shadow: 0 12px 28px rgba(36, 81, 157, 0.18);
 }
 
 .card h3 {
@@ -199,14 +210,14 @@ h1 {
 }
 
 .stack {
-  color: #8a4e2f;
+  color: var(--deep-blue);
   font-size: 0.92rem;
   font-weight: 600;
 }
 
 .card a,
 .mail {
-  color: var(--accent-2);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
